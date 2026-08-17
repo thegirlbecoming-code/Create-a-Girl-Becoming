@@ -1,2 +1,748 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Girl Becoming</title><link rel="stylesheet" href="style.css"></head><body><div id="app"><section id="welcome"><h1>Everyone is becoming someone.</h1><p>Create yours.</p><button id="startBtn">Create Your Girl ♡</button></section><section id="creator" hidden><div class="preview"><div id="character"><img id="bgLayer"><img id="bodyLayer"><img id="eyesLayer"><img id="noseLayer"><img id="mouthLayer"><img id="hairBackLayer"><img id="outfitLayer"><img id="accessoryLayer"><img id="hairFrontLayer"></div></div><aside class="controls"><h2>Create Your Girl ♡</h2><nav><button data-tab="hair">Hair</button><button data-tab="face">Face</button><button data-tab="outfit">Outfit</button><button data-tab="accessory">Accessories</button><button data-tab="background">Background</button></nav><div id="options"></div><button id="continueBtn">Continue to Veya →</button></aside></section></div><script src="script.js"></script></body></html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>The Girl Becoming</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Cormorant+Garamond:wght@500;700&display=swap"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<div id="sparkles"></div>
+
+<div id="flowers"></div>
+
+<!-- =======================
+WELCOME SCREEN
+======================= -->
+
+<section
+id="welcomeScreen">
+
+<div
+class="welcomeCard">
+
+<h1>
+
+The Girl Becoming
+
+</h1>
+
+<p>
+
+Everyone is becoming someone.
+
+Create yours.
+
+</p>
+
+<button
+id="startButton">
+
+Create Your Girl ♡
+
+</button>
+
+</div>
+
+</section>
+
+<!-- =======================
+GAME
+======================= -->
+
+<main
+id="game"
+class="hidden">
+
+<header>
+
+<h1>
+
+Create Your Girl
+
+</h1>
+
+<p>
+
+Design your Amira.
+
+</p>
+
+</header>
+
+<div
+class="layout">
+
+<!-- ======================
+CHARACTER
+====================== -->
+
+<section
+class="previewPanel">
+
+<div
+id="character">
+
+<img id="backgroundLayer">
+
+<img id="bodyLayer">
+
+<img id="eyesLayer">
+
+<img id="eyebrowLayer">
+
+<img id="eyelashLayer">
+
+<img id="noseLayer">
+
+<img id="mouthLayer">
+
+<img id="blushLayer">
+
+<img id="freckleLayer">
+
+<img id="hairBackLayer">
+
+<img id="outfitLayer">
+
+<img id="shoeLayer">
+
+<img id="accessoryLayer">
+
+<img id="hairFrontLayer">
+
+<img id="effectLayer">
+
+</div>
+
+</section>
+
+<!-- ======================
+RIGHT SIDE
+====================== -->
+
+<aside
+class="menuPanel">
+
+<div
+class="tabs">
+
+<button
+data-tab="skin">
+
+Skin
+
+</button>
+
+<button
+data-tab="face">
+
+Face
+
+</button>
+
+<button
+data-tab="hair">
+
+Hair
+
+</button>
+
+<button
+data-tab="clothes">
+
+Clothes
+
+</button>
+
+<button
+data-tab="accessories">
+
+Accessories
+
+</button>
+
+<button
+data-tab="backgrounds">
+
+Background
+
+</button>
+
+</div>
+
+<div
+id="menu">
+
+<!-- script.js builds everything here -->
+
+</div>
+
+<div
+class="bottomButtons">
+
+<button
+id="resetButton">
+
+Reset
+
+</button>
+
+<button
+id="continueButton">
+
+Continue →
+
+</button>
+
+</div>
+
+</aside>
+<!-- ======================
+PERSONALITY SCREEN
+====================== -->
+
+<section
+id="identityScreen"
+class="hidden">
+
+<div
+class="identityCard">
+
+<h2>
+
+Who is she?
+
+</h2>
+
+<div class="field">
+
+<label>
+
+Name
+
+</label>
+
+<input
+type="text"
+id="girlName"
+maxlength="20"
+placeholder="Enter a name">
+
+</div>
+
+<div class="field">
+
+<label>
+
+Age
+
+</label>
+
+<select id="girlAge">
+
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>16</option>
+<option>17</option>
+<option>18</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label>
+
+Favorite Color
+
+</label>
+
+<input
+type="text"
+id="favoriteColor"
+placeholder="Pink">
+
+</div>
+
+<div class="field">
+
+<label>
+
+Dream Career
+
+</label>
+
+<input
+type="text"
+id="career"
+placeholder="Fashion Designer">
+
+</div>
+
+<div class="field">
+
+<label>
+
+Personality
+
+</label>
+
+<select
+id="personality">
+
+<option>Sweet</option>
+
+<option>Confident</option>
+
+<option>Creative</option>
+
+<option>Shy</option>
+
+<option>Kind</option>
+
+<option>Funny</option>
+
+<option>Elegant</option>
+
+</select>
+
+</div>
+
+<button
+id="continueToVeya">
+
+Create Your Veya →
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ======================
+VEYA SCREEN
+====================== -->
+
+<section
+id="veyaScreen"
+class="hidden">
+
+<div
+class="veyaCard">
+
+<h2>
+
+Create Your Veya
+
+</h2>
+
+<div
+id="veyaPreview">
+
+<img
+id="veyaBase">
+
+<img
+id="veyaEyes">
+
+<img
+id="veyaAccessory">
+
+</div>
+
+<div
+id="veyaMenu">
+
+</div>
+
+<button
+id="finishButton">
+
+Finish
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ======================
+FINAL CARD
+====================== -->
+
+<section
+id="cardScreen"
+class="hidden">
+
+<div
+class="profileCard">
+
+<h2>
+
+The Girl Becoming
+
+</h2>
+
+<div
+id="finalCharacter">
+
+<img
+id="finalPreview">
+
+</div>
+
+<div
+class="profileInfo">
+
+<h3
+id="finalName">
+
+Amira
+
+</h3>
+
+<p
+id="finalPersonality">
+
+Creative
+
+</p>
+
+</div>
+
+<div
+class="cardButtons">
+
+<button
+id="downloadButton">
+
+Download Card
+
+</button>
+
+<button
+id="playAgainButton">
+
+Create Again
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+<!-- ======================================
+COLLECTION DRAWER
+====================================== -->
+
+<section id="collectionDrawer" class="hidden">
+
+<div class="drawerHeader">
+
+<h2>
+
+Collections
+
+</h2>
+
+<button id="closeDrawer">
+
+✕
+
+</button>
+
+</div>
+
+<div class="collectionGrid">
+
+<div class="collectionCard">
+
+<h3>
+
+Classic Collection
+
+</h3>
+
+<p>
+
+The original Girl Becoming styles.
+
+</p>
+
+</div>
+
+<div class="collectionCard">
+
+<h3>
+
+Coquette Collection
+
+</h3>
+
+<p>
+
+Soft bows, lace and pink fashion.
+
+</p>
+
+</div>
+
+<div class="collectionCard">
+
+<h3>
+
+Dark Academia
+
+</h3>
+
+<p>
+
+Books, uniforms and vintage outfits.
+
+</p>
+
+</div>
+
+<div class="collectionCard">
+
+<h3>
+
+Coming Soon...
+
+</h3>
+
+<p>
+
+New monthly releases.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================================
+SAVE MENU
+====================================== -->
+
+<section
+id="saveMenu"
+class="hidden">
+
+<div
+class="popup">
+
+<h2>
+
+Save Progress
+
+</h2>
+
+<p>
+
+Your character can be saved directly in your browser.
+
+</p>
+
+<div class="popupButtons">
+
+<button id="saveGirl">
+
+Save
+
+</button>
+
+<button id="loadGirl">
+
+Load
+
+</button>
+
+<button id="deleteGirl">
+
+Delete Save
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================================
+SETTINGS
+====================================== -->
+
+<section
+id="settingsMenu"
+class="hidden">
+
+<div class="popup">
+
+<h2>
+
+Settings
+
+</h2>
+
+<label>
+
+Music
+
+<input
+type="checkbox"
+id="musicToggle">
+
+</label>
+
+<label>
+
+Sound Effects
+
+<input
+type="checkbox"
+id="soundToggle">
+
+</label>
+
+<label>
+
+Animations
+
+<input
+type="checkbox"
+id="animationToggle"
+checked>
+
+</label>
+
+<label>
+
+Dark Mode
+
+<input
+type="checkbox"
+id="darkModeToggle">
+
+</label>
+
+<button
+id="closeSettings">
+
+Done
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ======================================
+LOADING SCREEN
+====================================== -->
+
+<section
+id="loadingScreen"
+class="hidden">
+
+<div class="loadingCard">
+
+<h2>
+
+Loading...
+
+</h2>
+
+<div
+class="loadingBar">
+
+<div
+id="loadingFill">
+
+</div>
+
+</div>
+
+<p>
+
+Preparing your Girl Becoming experience.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ======================================
+FOOTER
+====================================== -->
+
+<footer>
+
+<p>
+
+© The Girl Becoming
+
+</p>
+
+<nav>
+
+<button id="openCollections">
+
+Collections
+
+</button>
+
+<button id="openSettings">
+
+Settings
+
+</button>
+
+<button id="openSave">
+
+Save
+
+</button>
+
+</nav>
+
+</footer>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
+</div>
